@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moss & Rug</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700&family=Chillax:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="#">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1 class="logo-text">MOSS<span class="ampersand">&</span>RUG</h1>
+                <p class="tagline">texturas para tu espacio</p>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link active">INICIO</a></li>
+                    <li><a href="shop.html" class="nav-link">TIENDA</a></li>
+                    <li><a href="about.html" class="nav-link">NOSOTROS</a></li>
+                    <li><a href="contact.html" class="nav-link">CONTACTO</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="search-box">
+                    <button class="search-btn"><i class="fas fa-magnifying-glass"></i></button>
+                    <input type="text" placeholder="Buscar alfombras..." class="search-input">
+                </div>
+                <div class="user-actions">
+                    <button class="user-icon" id="login-toggle"><i class="fas fa-user"></i></button>
+                    <div class="cart-icon">
+                        <button id="cart-toggle">
+                            <i class="fas fa-bag-shopping"></i>
+                            <span class="cart-count">3</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Marquee de marcas/colecciones -->
+    <div class="marquee-container">
+        <div class="marquee">
+            <div class="marquee-content">
+                <span>COLECCIÓN PRIMAVERA 2025</span>
+                <i class="fas fa-circle"></i>
+                <span>ENVÍO GRATIS EN PEDIDOS +$500</span>
+                <i class="fas fa-circle"></i>
+                <span>30 DÍAS DE DEVOLUCIÓN</span>
+                <i class="fas fa-circle"></i>
+                <span>HECHO A MANO</span>
+                <i class="fas fa-circle"></i>
+                <span>MATERIALES SOSTENIBLES</span>
+                <i class="fas fa-circle"></i>
+                <span>COLECCIÓN PRIMAVERA 2025</span>
+                <i class="fas fa-circle"></i>
+                <span>ENVÍO GRATIS EN PEDIDOS +$500</span>
+                <i class="fas fa-circle"></i>
+                <span>30 DÍAS DE DEVOLUCIÓN</span>
+                <i class="fas fa-circle"></i>
+                <span>HECHO A MANO</span>
+                <i class="fas fa-circle"></i>
+                <span>MATERIALES SOSTENIBLES</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Login -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <button class="close-modal"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h2>Iniciar Sesión</h2>
+                <p>Accede a tu cuenta para ver tus pedidos y favoritos</p>
+            </div>
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" placeholder="Tu contraseña" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox"> Recordarme
+                    </label>
+                    <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                </div>
+                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                <div class="divider">
+                    <span>o</span>
+                </div>
+                <button type="button" class="btn btn-secondary">
+                    <i class="fab fa-google"></i> Continuar con Google
+                </button>
+                <p class="signup-link">¿No tienes cuenta? <a href="#">Regístrate aquí</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Carrito -->
+    <div class="modal" id="cart-modal">
+        <div class="modal-content cart-modal">
+            <button class="close-modal"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h2>Tu Carrito</h2>
+                <p>3 productos en tu carrito</p>
+            </div>
+            <div class="cart-items">
+                <!-- Productos del carrito -->
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="img/1.jpeg" alt="Alfombra Urban Weave">
+                    </div>
+                    <div class="cart-item-details">
+                        <h4>Urban Weave</h4>
+                        <p>Mediana • Beige</p>
+                        <div class="cart-item-price">$349.99</div>
+                        <div class="cart-item-actions">
+                            <button class="quantity-btn decrease">-</button>
+                            <span class="quantity">1</span>
+                            <button class="quantity-btn increase">+</button>
+                        </div>
+                    </div>
+                    <button class="remove-item"><i class="fas fa-trash"></i></button>
+                </div>
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="img/2.jpeg" alt="Alfombra Minimal Grid">
+                    </div>
+                    <div class="cart-item-details">
+                        <h4>Minimal Grid</h4>
+                        <p>Pequeña • Gris</p>
+                        <div class="cart-item-price">$299.99</div>
+                        <div class="cart-item-actions">
+                            <button class="quantity-btn decrease">-</button>
+                            <span class="quantity">2</span>
+                            <button class="quantity-btn increase">+</button>
+                        </div>
+                    </div>
+                    <button class="remove-item"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span>$949.97</span>
+                </div>
+                <div class="summary-row">
+                    <span>Envío</span>
+                    <span class="free-shipping">Gratis</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span>$949.97</span>
+                </div>
+            </div>
+            <div class="cart-actions">
+                <button class="btn btn-secondary">Seguir Comprando</button>
+                <button class="btn btn-primary">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido principal (se cargarán las páginas aquí) -->
+    <main id="main-content">
+        <!-- El contenido se cargará dinámicamente -->
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <h2 class="logo-text">MOSS<span class="ampersand">&</span>RUG</h2>
+                    </div>
+                    <p>Alfombras sostenibles y artesanales para el hogar moderno. Fundado en 2010.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/moss.andrugs/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>TIENDA</h4>
+                    <ul>
+                        <li><a href="shop.html">Alfombras Modernas</a></li>
+                        <li><a href="shop.html">Alfombras Tradicionales</a></li>
+                        <li><a href="shop.html">Alfombras de Lana</a></li>
+                        <li><a href="shop.html">Alfombras de Seda</a></li>
+                        <li><a href="shop.html">Novedades</a></li>
+                        <li><a href="shop.html">Más Vendidas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>EMPRESA</h4>
+                    <ul>
+                        <li><a href="about.html">Nuestra Historia</a></li>
+                        <li><a href="about.html">Sostenibilidad</a></li>
+                        <li><a href="about.html">Artesanos</a></li>
+                        <li><a href="about.html">Trabaja con Nosotros</a></li>
+                        <li><a href="about.html">Prensa</a></li>
+                        <li><a href="about.html">Mayoristas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>AYUDA</h4>
+                    <ul>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Envíos</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Guía de Cuidado</a></li>
+                        <li><a href="#">Guía de Tamaños</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section newsletter">
+                    <h4>SUSCRÍBETE</h4>
+                    <p>Recibe novedades, ofertas exclusivas y consejos de diseño.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Tu email">
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                    <p class="privacy-note">Al suscribirte, aceptas nuestra Política de Privacidad</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 MOSS & RUG. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Servicio</a>
+                    <a href="#">Política de Cookies</a>
+                </div>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notificaciones -->
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <p>Producto añadido al carrito</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
